@@ -1,7 +1,9 @@
 <template>
-  <App />
+  <div>
+    <App />
+  </div>
 </template>
 
 <script>
-export default {}
+export default {};
 </script>

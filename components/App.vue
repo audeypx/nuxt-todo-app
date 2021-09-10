@@ -1,5 +1,12 @@
 <template>
-    <div class="text-large text-black-200">
-        me im just testing something
+    <div class="background text-white bg-black">
+        this is black yes?
     </div>
 </template>
+ <script>
+ export default {
+     
+ }
+ </script>
+
+ 
