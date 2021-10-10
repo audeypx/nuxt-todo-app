@@ -5,7 +5,7 @@
 </template>
 
 <style>
-@import url('hhttps://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
 * {
   margin: 0;
