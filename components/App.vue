@@ -2,7 +2,7 @@
   <div>
     <div class="background bg-blue-primary">
       <div class="flex justify-around p-12 ">
-        <p class="tracking-tighter text-3xl font-extrabold text-light-taskscolor">TODO</p>
+        <p class="tracking-tighter text-3xl font-extrabold text-light-taskcolor">TODO</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-sun"
