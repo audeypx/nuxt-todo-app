@@ -40,8 +40,8 @@
           >
             <p class="items-left text-sm" data-items-left="">3 items left</p>
             <div class="all-active-completed">
-              <button class="btn font-bold text-xl pr-2" data-btn-all="">All</button>
-              <button class="btn font-bold text-xl pr-2" data-btn-active="">Active</button>
+              <button class="btn font-bold text-base pr-2" data-btn-all="">All</button>
+              <button class="btn font-bold text-base pr-2" data-btn-active="">Active</button>
               <button class="btn active font-bold text-xl text-dark-activebuttonanchor" data-btn-completed="">
                 Completed
               </button>
