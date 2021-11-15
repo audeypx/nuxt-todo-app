@@ -25,13 +25,16 @@
             />
           </svg>
         </div>
-
-        <input
-          class="taskinput text-dark-newtodocolor bg-dark-inner rounded-md flex items-center w-full p-4 focus:outline-none "
-          type="text"
-          placeholder="Create a new todo..."
-        />
-
+        <div class="flex relative">
+          <div class="p-2 rounded-md absolute z-10">
+            <div class="rounded-full w-8 h-8 border border-dark-circleborder"></div>
+          </div>
+          <input
+            class="text-dark-newtodocolor bg-dark-inner rounded-md flex items-center w-full p-4 focus:outline-none "
+            type="text"
+            placeholder="Create a new todo..."
+          />
+        </div>
         <div class="task-container rounded-md bg-dark-inner mt-10">
           <div class="list-tasks" data-list-of-tasks=""></div>
 
@@ -40,9 +43,16 @@
           >
             <p class="items-left text-sm" data-items-left="">3 items left</p>
             <div class="all-active-completed">
-              <button class="btn font-bold text-base pr-2" data-btn-all="">All</button>
-              <button class="btn font-bold text-base pr-2" data-btn-active="">Active</button>
-              <button class="btn active font-bold text-xl text-dark-activebuttonanchor" data-btn-completed="">
+              <button class="btn font-bold text-base pr-2" data-btn-all="">
+                All
+              </button>
+              <button class="btn font-bold text-base pr-2" data-btn-active="">
+                Active
+              </button>
+              <button
+                class="btn active font-bold text-xl text-dark-activebuttonanchor"
+                data-btn-completed=""
+              >
                 Completed
               </button>
             </div>
@@ -60,11 +70,19 @@
       <div class=" pt-48">
         <p class="text-center text-dark-footercolor">
           Challenge by
-          <a class="text-white" href="https://www.frontendmentor.io" target="_blank"
+          <a
+            class="text-white"
+            href="https://www.frontendmentor.io"
+            target="_blank"
             >Frontend Mentor.</a
           >
           Coded by:
-          <a class="text-white" href="https://github.com/audeypx" target="_blank">Audrey.</a>
+          <a
+            class="text-white"
+            href="https://github.com/audeypx"
+            target="_blank"
+            >Audrey.</a
+          >
         </p>
       </div>
     </div>
@@ -80,7 +98,7 @@ export default {};
   background-position: top center;
   height: 45vh;
 }
-.taskinput::before {
+.input::before {
   content: "";
   position: absolute; /* positioning agains new task form */
   left: 1rem;
