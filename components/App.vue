@@ -26,13 +26,13 @@
           </svg>
         </div>
         <div class="flex relative">
-          <div class="p-2 rounded-md absolute z-10">
-            <div class="rounded-full w-8 h-8 border border-dark-circleborder"></div>
+          <div class="pt-3 pl-4 rounded-md absolute z-10">
+            <div class="rounded-full w-7 h-7 border border-dark-circleborder"></div>
           </div>
           <input
             class="text-dark-newtodocolor bg-dark-inner rounded-md flex items-center w-full p-4 focus:outline-none "
             type="text"
-            placeholder="Create a new todo..."
+            placeholder="       Create a new todo..."
           />
         </div>
         <div class="task-container rounded-md bg-dark-inner mt-10">
