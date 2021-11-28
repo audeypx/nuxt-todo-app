@@ -26,11 +26,11 @@
           </svg>
         </div>
         <div class="flex relative">
-          <div class="pt-3 pl-4 rounded-md absolute z-10">
+          <div class="pt-3 pl-4 bg-dark-inner round-side">
             <div class="rounded-full w-7 h-7 border border-dark-circleborder"></div>
           </div>
           <input
-            class="text-dark-newtodocolor bg-dark-inner rounded-md flex items-center w-full p-4 focus:outline-none "
+            class="text-dark-newtodocolor bg-dark-inner round-side-big flex items-center w-full p-4 focus:outline-none "
             type="text"
             placeholder="       Create a new todo..."
           />
@@ -98,6 +98,15 @@ export default {};
   background-position: top center;
   height: 45vh;
 }
+.round-side{
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+.round-side-big{
+  border-top-right-radius: 0.375rem ;
+  border-bottom-right-radius: 0.375rem ;
+}
+
 .input::before {
   content: "";
   position: absolute; /* positioning agains new task form */
