@@ -2,7 +2,7 @@
   <div class="bg-dark-inner">
     <div>
       <div class="background"></div>
-      <div class="w-2/5 m-auto -mt-64">
+      <div class="lg:w-2/5 md:w-3/6 sm:w-4/6 w-95 m-auto -mt-64">
         <div class="flex justify-between py-12">
           <p class="tracking-tighter text-3xl font-extrabold text-white">
             TODO
@@ -45,7 +45,9 @@
           />
         </div>
 
-        <div class="task-container text-dark-newtodocolor rounded-md bg-dark-inner mt-8">
+        <div
+          class="task-container text-dark-newtodocolor rounded-md bg-dark-inner mt-8"
+        >
           <draggable
             tag="div"
             v-model="todos"
@@ -56,7 +58,7 @@
             <div
               v-for="(todo, index) in todosFiltered"
               :key="index"
-              class="list-tasks bg-dark-inner p-2"
+              class="list-tasks bg-dark-inner py-2 px-4 "
             >
               <div class="todo-p flex justify-start items-center">
                 <label class="custom-checkbox">
@@ -65,10 +67,15 @@
                 </label>
                 <p :class="{ completed: todo.completed }">{{ todo.title }}</p>
               </div>
-              <button class="cancel text-3xl bg-transparent border-0 ring-dark-circleborder cursor-pointer" @click="removeTodo(index)">
-                <nuxt-img src="/images/icon-cross.svg" alt="cross" />
-              </button></div
-          ></draggable>
+              <button
+                class="cancel text-3xl bg-transparent border-0 ring-dark-circleborder cursor-pointer"
+                @click="removeTodo(index)"
+              >
+                <!-- <img src="~/assets/icon-cross.svg" />  -->
+                x
+              </button>
+            </div></draggable
+          >
 
           <div
             class="list-footer text-dark-newtodocolor text-xs flex justify-between p-4 items-center"
@@ -90,7 +97,7 @@
             </div> -->
 
             <div class="filter all-active-completed" id="filter">
-              <button class="btn font-bold text-base pr-2">
+              <button class="btn font-bold text-sm sm:text-base pr-2">
                 <p
                   :class="{ active: filter === 'all' }"
                   @click="filter = 'all'"
@@ -98,7 +105,7 @@
                   All
                 </p>
               </button>
-              <button class="btn font-bold text-base pr-2">
+              <button class="btn font-bold text-sm sm:text-base pr-2">
                 <p
                   :class="{ active: filter === 'active' }"
                   @click="filter = 'active'"
@@ -108,7 +115,7 @@
               </button>
 
               <button
-                class="btn active font-bold text-xl text-dark-activebuttonanchor"
+                class="btn active font-bold text-sm sm:text-xl text-dark-activebuttonanchor"
               >
                 <p
                   :class="{ active: filter === 'allCompleted' }"
@@ -163,6 +170,9 @@
 export default {
   name: "TodoList",
   props: ["mode"],
+  // plugins: [
+  //   { src: '~/plugins/draggable.ts', mode: 'client' }
+  // ],
   // components: {
   //   draggable: vuedraggable,
   // },
@@ -223,6 +233,9 @@ export default {
 </script>
 
 <style>
+/* .container-width {
+  width: 95%;
+} */
 .background {
   background-image: url("~/images/bg-desktop-dark.jpg");
   background-position: top center;
@@ -273,9 +286,9 @@ export default {
   align-items: center;
 }
 
-.custom-checkbox input:checked + span{
-  background: linear-gradient(#57DDFF, #C058F3); 
-  border:none;
+.custom-checkbox input:checked + span {
+  background: linear-gradient(#57ddff, #c058f3);
+  border: none;
 }
 
 .custom-checkbox input:checked + span:before {
@@ -289,23 +302,24 @@ export default {
   background-position: center;
 }
 
-.cancel{
+.cancel {
+  font-weight: 100;
   float: right;
 }
 
-.cancel:focus{
-    outline:none;
+.cancel:focus {
+  outline: none;
 }
 
-.list-tasks{
-   border-bottom: 1px solid #777A92;
-    border-top-left-radius: 5px;
-     border-top-right-radius: 5px;
-    width: 100%;
-    margin:0 auto;
-    display: flex;
-    justify-content: space-between;
-    transition: background 0.3s ease-in-out;
-    animation: fadeIn ease 0.7s;
+.list-tasks {
+  border-bottom: 1px solid #777a92;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  transition: background 0.3s ease-in-out;
+  animation: fadeIn ease 0.7s;
 }
 </style>

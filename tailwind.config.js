@@ -3,6 +3,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      width: {
+        '95': '95%',
+      },
+
       colors: {
         light: {
           circleborder: '#e4e5f1',
