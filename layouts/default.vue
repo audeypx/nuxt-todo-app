@@ -17,6 +17,7 @@ html {
   font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: hsl(0, 0%, 100%);
 }
 </style>
 
